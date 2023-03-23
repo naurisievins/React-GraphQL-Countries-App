@@ -1,0 +1,21 @@
+.load_more_wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.load_more_btn {
+  padding: 5px 50px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  background-color: #c9d2d1;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  &:hover {
+    background-color: #a7adad;
+    border: 1px solid white;
+  }
+}
