@@ -18,6 +18,8 @@ export default function LoadMore({
   const [disableLoadBtn, setDisableLoadBtn] = useState(false);
 
   useEffect(() => {
+    setDisableLoadBtn(false);
+
     if (foundCountries) {
       if (loadAmount >= foundCountries.length) {
         setDisableLoadBtn(true);
@@ -27,7 +29,7 @@ export default function LoadMore({
     if (loadAmount >= countries.length) {
       setDisableLoadBtn(true);
     }
-  }, [loadAmount]);
+  }, [loadAmount, foundCountries]);
 
   return (
     <div className={styles.load_more_wrapper}>

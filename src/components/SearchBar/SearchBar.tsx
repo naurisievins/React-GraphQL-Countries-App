@@ -22,7 +22,7 @@ export default function SearchBar({
   const [searchFor, setSearchFor] = useState("");
 
   const onSearchInput = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchFor(event.target.value.toLowerCase());
+    setSearchFor(event.target.value);
     setLoadAmount(20);
   };
 
@@ -37,7 +37,7 @@ export default function SearchBar({
 
     if (searchFor) {
       const filteredCountries = countries.filter((country) => {
-        return country.name.toLowerCase().includes(searchFor);
+        return country.name.toLowerCase().includes(searchFor.toLowerCase());
       });
 
       setFoundCountries([...filteredCountries]);
